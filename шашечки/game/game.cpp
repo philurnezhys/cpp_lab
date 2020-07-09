@@ -282,22 +282,18 @@ game_t::game_outcome_t game_t::is_win(size_t player_num) const {
     }
 
     if (!can_move) {
-        return
-                WIN;
+        return WIN;
     }
 
     if (steps_amount > 1000) {
-        return
-                TIE;
+        return TIE;
     }
 
     if (players[0]->checker_amount == 0 || players[1]->checker_amount == 0) {
-        return
-                WIN;
+        return WIN;
 
     }
-    return
-            IN_PROGRESS;
+    return IN_PROGRESS;
 }
 
 void game_t::play() {
